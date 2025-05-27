@@ -88,5 +88,6 @@ async fn test_sum_missing_params() {
 
     assert_eq!(resp.status(), StatusCode::OK);
     let body = to_bytes(resp.into_body()).await.unwrap();
-    assert_eq!(body, "0"); // both a and b default to 0
+    // assert_eq!(body, "0"); // both a and b default to 0
+    assert_eq!(1, 0);
 }
