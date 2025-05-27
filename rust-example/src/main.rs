@@ -13,6 +13,7 @@ mod handlers;
 async fn main() -> std::io::Result<()> {
     // Create and run an HTTP server
     HttpServer::new(|| {
+        println!("Starting server on http://localhost:8080");
         // Construct the application with a single route:
         // - `GET /sum` is handled by the `handlers::sum` function
         App::new().route("/sum", web::get().to(handlers::sum))
